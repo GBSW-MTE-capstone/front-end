@@ -2,12 +2,17 @@
 html, body {
   height: 100%;
 }
+body {
+  overflow: scroll;
+
+}
 * {
   margin: 0;
   padding: 0;
   font-family: 'Noto Sans KR', sans-serif;
 }
 
+//home
 .header {
   background-color: #fff;
   padding: 5px 10px;
@@ -34,7 +39,6 @@ html, body {
     border-radius: 50px;
     overflow: hidden;
     font-size: 1.3em;
-    padding: 3px 5px;
     position: relative;
     * {
       margin: 0;
@@ -44,30 +48,51 @@ html, body {
       outline: none;
     }
     button {
-      background-color: white;
+      background-color: #FFA000;
+      font-size: 1em;
+      padding: 8px 6px;
+      padding-left: 10px;
+    }
+    input {
+      width: 400px;
+      padding: 8px 9px;
+      font-size: 0.8em;
     }
   }
 }
+#nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
 .nav {
-  text-align: center;
   background-color: #FFA000;
   color: #fff;
-  padding: 18px 5px;
+  padding: 25px 5px;
+  
+  
   &  :is(ul, li) {
     display: inline-block;
   }
   & li {
     margin: 0 30px;
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 1.3rem;
   }
   & li:hover {
     cursor: pointer;
     color: rgb(223, 223, 223);
   }
 }
+//footer
 .footer {
+  text-align: center;
   display: block;
   width: 100%;
-  background-color: #ccc;
+}
+
+//home
+.banner {
+  width: 100%;
 }
