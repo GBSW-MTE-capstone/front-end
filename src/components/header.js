@@ -12,7 +12,7 @@ export const Header = () => {
   };
 
   return (
-    <div>
+    <div className="headerContainer">
       <div className="header">
         <div>
           <img

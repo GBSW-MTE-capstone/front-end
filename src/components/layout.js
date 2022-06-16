@@ -5,7 +5,7 @@ export const Layout = (props) => {
   return (
     <>
       <Header />
-      {props.children}
+      <div className="container">{props.children}</div>
       <Footer />
     </>
   );

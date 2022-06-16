@@ -1,17 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 html, body {
   height: 100%;
-}
-body {
-  overflow: scroll;
-
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #ccc;
+  }
 }
 * {
   margin: 0;
   padding: 0;
   font-family: 'Noto Sans KR', sans-serif;
 }
-
+.headerContainer {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
 //home
 .header {
   background-color: #fff;
@@ -60,18 +69,20 @@ body {
     }
   }
 }
-#nav {
-  position: sticky;
-  top: 0;
+.container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  scroll-snap-type: y proximity;
+  & > div{
+    scroll-snap-align: center;
+  }
 }
 .nav {
   background-color: #FFA000;
   color: #fff;
   padding: 25px 5px;
-  
-  
+  text-align: center;
+  top: 0;
   &  :is(ul, li) {
     display: inline-block;
   }
@@ -95,4 +106,26 @@ body {
 //home
 .banner {
   width: 100%;
+}
+.mapmodal {
+  background-color: white;
+  border: 1px solid #ccc;
+  position: relative;
+  padding: 5px 15px;
+}
+
+.UseongMap {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  position: relative;
+  & > img {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.8;
+  }
 }
