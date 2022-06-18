@@ -1,7 +1,7 @@
 import React, { useState, forwardRef, useEffect } from "react";
 import MapModal from "./mapModal";
 
-const SvgComponent = ({ modalAttr, setModalAttr }) => {
+const SvgComponent = ({ modalAttr, setModalAttr, setImgId }) => {
   const [modal, setModal] = useState(false);
 
   const mouseOn = (e) => {
@@ -9,8 +9,6 @@ const SvgComponent = ({ modalAttr, setModalAttr }) => {
     // const y = e.pageY;
     // const name = e.target.getAttribute("name");
     setModalAttr({
-      x: e.pageX,
-      y: e.pageY,
       name: e.target.getAttribute("name"),
     });
     e.target.style.fill = "#ff8000";
@@ -33,6 +31,7 @@ const SvgComponent = ({ modalAttr, setModalAttr }) => {
         viewBox="0 0 194.22812 134.36273"
         version="1.1"
         id="svg5"
+        opacity="0.9"
       >
         <path
           // onMouseEnter={mouseOn}

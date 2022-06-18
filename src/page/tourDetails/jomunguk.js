@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 import { Layout } from "../../components/layout";
 export const JomungukMuseum = () => {
   return (
@@ -8,4 +8,3 @@ export const JomungukMuseum = () => {
     </Layout>
   );
 };
-export default React.memo(Example);

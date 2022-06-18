@@ -107,19 +107,16 @@ html, body {
 .banner {
   width: 100%;
 }
-.mapmodal {
-  background-color: white;
-  border: 1px solid #ccc;
-  position: relative;
-  padding: 5px 15px;
-}
 
 .UseongMap {
   overflow: hidden;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   position: relative;
+  padding: 5px 0;
+  height: fit-content;
   & > img {
     z-index: -1;
     position: absolute;
@@ -127,5 +124,28 @@ html, body {
     left: 0;
     width: 100%;
     opacity: 0.8;
+  }
+  .infoMap {
+    margin: 0 40px;
+    min-height: 500px;
+    min-width: 300px;
+    background-color: white;
+    border-radius: 15px;
+    opacity: 0.9;
+    li {
+      padding: 3px 20px;
+    }
+    ul {
+      text-align: left;
+      list-style: none;
+      margin: 5px 0;
+    }
+    h2 {
+      background-color: #FFA000;
+      color: white;
+      padding: 5px 15px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
   }
 }
