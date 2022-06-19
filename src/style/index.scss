@@ -98,6 +98,7 @@ html, body {
 }
 //footer
 .footer {
+  margin: 10px 0;
   text-align: center;
   display: block;
   width: 100%;
@@ -125,6 +126,10 @@ html, body {
     width: 100%;
     opacity: 0.8;
   }
+  svg {
+    max-height: 500px;
+    height: 80%;
+  }
   .infoMap {
     margin: 0 40px;
     min-height: 500px;
@@ -146,6 +151,24 @@ html, body {
       padding: 5px 15px;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
+    }
+  }
+}
+
+.bottomSection {
+  background-image: url('https://mblogthumb-phinf.pstatic.net/MjAyMDA2MjJfMjIy/MDAxNTkyODA0NzQ5ODE0.iwc1mZ_SVz3eP_IhEESkyXP6eB0JONGxU2UJbfZ_yNcg.gbZp8MjIRWSHmkxFbLBPYlhe2lcLOBoqUT3QrMh5kIsg.JPEG.postnaeil/%EB%8F%84%EC%8B%9C_%ED%99%A9%ED%98%BC.jpg?type=w800');
+  background-size: cover;
+  padding: 0 20%;
+  margin: 10px 0;
+  min-height: 400px;
+  & > *:first-child {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    & > *{
+      text-align: center;
+      background-color: #ccc;
+      width: 300px;
     }
   }
 }

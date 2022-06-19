@@ -26,8 +26,6 @@ const SvgComponent = ({ modalAttr, setModalAttr, setImgId }) => {
   return (
     <>
       <svg
-        width="734.09052"
-        height="507.82764"
         viewBox="0 0 194.22812 134.36273"
         version="1.1"
         id="svg5"

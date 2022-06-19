@@ -1,6 +1,7 @@
 import { Layout } from "../components/layout";
 import banner from "../assets/banner.png";
 import UseongMapSVG from "../components/usengMapSVG";
+import backgroundImg from "../assets/sibal.jpg";
 import { useState } from "react";
 export const Home = () => {
   const data = null;
@@ -32,7 +33,13 @@ export const Home = () => {
         </div>
         <img src={background} alt="지역사진" />
       </div>
-      <div>빼액</div>
+      <div className="bottomSection">
+        <div>
+          <div>축제 정보</div>
+          <div>여행 후기</div>
+        </div>
+        <div>의성 지수 게임</div>
+      </div>
     </Layout>
   );
 };
