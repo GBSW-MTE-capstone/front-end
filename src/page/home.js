@@ -1,7 +1,7 @@
 import { Layout } from "../components/layout";
 import banner from "../assets/banner.png";
 import UseongMapSVG from "../components/usengMapSVG";
-import backgroundImg from "../assets/sibal.jpg";
+import goGameBanner from "../assets/goGameBanner.png";
 import { useState } from "react";
 export const Home = () => {
   const data = null;
@@ -14,9 +14,12 @@ export const Home = () => {
   });
   return (
     <Layout>
-      <div>
-        <img src={banner} className="banner" alt="banner" />
-      </div>
+      <img
+        style={{ margin: "0" }}
+        src={banner}
+        className="banner"
+        alt="banner"
+      />
       <div className="UseongMap">
         <UseongMapSVG
           setImgId={setImgId}
@@ -38,7 +41,7 @@ export const Home = () => {
           <div>축제 정보</div>
           <div>여행 후기</div>
         </div>
-        <div>의성 지수 게임</div>
+        <img src={goGameBanner} />
       </div>
     </Layout>
   );

@@ -10,6 +10,10 @@ html, body {
     background: #ccc;
   }
 }
+a:link, a:active, a:visited, a:hover {
+  text-decoration: none;
+  color: #fff;
+}
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +33,11 @@ html, body {
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
+  & > div:first-child {
+    & > :is(a:active, a:visited, a:hover, a:link) {
+      color: black;
+    }
+  }
   & > div {
     display: flex;
     align-items: center;
@@ -98,7 +107,6 @@ html, body {
 }
 //footer
 .footer {
-  margin: 10px 0;
   text-align: center;
   display: block;
   width: 100%;
@@ -116,7 +124,7 @@ html, body {
   align-items: center;
   margin: 0;
   position: relative;
-  padding: 5px 0;
+  padding: 15px 0;
   height: fit-content;
   & > img {
     z-index: -1;
@@ -159,16 +167,26 @@ html, body {
   background-image: url('https://mblogthumb-phinf.pstatic.net/MjAyMDA2MjJfMjIy/MDAxNTkyODA0NzQ5ODE0.iwc1mZ_SVz3eP_IhEESkyXP6eB0JONGxU2UJbfZ_yNcg.gbZp8MjIRWSHmkxFbLBPYlhe2lcLOBoqUT3QrMh5kIsg.JPEG.postnaeil/%EB%8F%84%EC%8B%9C_%ED%99%A9%ED%98%BC.jpg?type=w800');
   background-size: cover;
   padding: 0 20%;
-  margin: 10px 0;
   min-height: 400px;
-  & > *:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & > * {
+    opacity: 0.85;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around  ;
     align-items: center;
     & > *{
-      text-align: center;
-      background-color: #ccc;
-      width: 300px;
+      padding: 5px;
+      background-color: rgba(228, 228, 228, 0.753);
+      width: 400px;
+      height: 170px;
+      border-radius: 8px;
     }
+  }
+  & > *:last-child {
+    border-radius: 8px;
+    width: 980px;
+    margin: 10px auto;
   }
 }
