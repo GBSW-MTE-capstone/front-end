@@ -37,6 +37,9 @@ export const Header = () => {
       </div>
       <div className="nav" id="nav">
         <ul>
+          <Link to={"/"}>
+            <li>HOME</li>
+          </Link>
           <Link to={"/tour"}>
             <li>의성 관광 명소</li>
           </Link>
@@ -46,7 +49,6 @@ export const Header = () => {
           <li>음식·툭산물</li>
           <li>여행 후기</li>
           <li>QnA</li>
-          <li>나의 의성지수는?</li>
         </ul>
       </div>
     </div>

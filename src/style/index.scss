@@ -184,7 +184,7 @@ a:link, a:active, a:visited, a:hover {
       border-radius: 8px;
     }
   }
-  & > *:last-child {
+  & > *:last-child > img {
     border-radius: 8px;
     width: 980px;
     margin: 10px auto;

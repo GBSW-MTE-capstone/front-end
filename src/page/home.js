@@ -3,6 +3,7 @@ import banner from "../assets/banner.png";
 import UseongMapSVG from "../components/usengMapSVG";
 import goGameBanner from "../assets/goGameBanner.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 export const Home = () => {
   const data = null;
   const [imgId, setImgId] = useState(1);
@@ -41,7 +42,9 @@ export const Home = () => {
           <div>축제 정보</div>
           <div>여행 후기</div>
         </div>
-        <img src={goGameBanner} />
+        <Link to={"/minigame"}>
+          <img src={goGameBanner} />
+        </Link>
       </div>
     </Layout>
   );
