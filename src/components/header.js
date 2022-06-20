@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa"
 import { Link } from "react-router-dom";
 export const Header = () => {
   const [searchText, setSearch] = useState("");
@@ -9,7 +9,7 @@ export const Header = () => {
   };
 
   const search = () => {
-    // 여행지 검색만 가능하게
+    console.log(searchText)
   };
 
   return (
@@ -30,7 +30,7 @@ export const Header = () => {
             placeholder="검색어를 입력하세요."
             onChange={onChange}
           />
-          <button>
+          <button onClick={search}>
             <FaSearch />
           </button>
         </div>

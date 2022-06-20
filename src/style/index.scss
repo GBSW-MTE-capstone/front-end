@@ -190,3 +190,15 @@ a:link, a:active, a:visited, a:hover {
     margin: 10px auto;
   }
 }
+.tourCon {
+  & > div:nth-child(even) {
+    background-color: rgb(238, 238, 238);
+    
+  }
+  & > * {
+    width: 50%;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 5px;
+  }
+}
