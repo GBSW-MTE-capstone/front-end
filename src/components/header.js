@@ -46,9 +46,15 @@ export const Header = () => {
           <Link to={"/event"}>
             <li>축제</li>
           </Link>
-          <li>음식·툭산물</li>
-          <li>여행 후기</li>
-          <li>QnA</li>
+          <Link to={"/foods"}>
+            <li>음식·툭산물</li>
+          </Link>
+          <Link to={"/tourreview"}>
+            <li>여행 후기</li>
+          </Link>
+          <Link to={"/qna"}>
+            <li>QnA</li>
+          </Link>
         </ul>
       </div>
     </div>

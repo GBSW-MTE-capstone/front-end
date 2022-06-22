@@ -4,6 +4,9 @@ import "./style/index.scss";
 import { Tour } from "./page/tour";
 import { Event } from "./page/event";
 import { MiniGame } from "./page/miniGame";
+import { Foods } from "./page/foods";
+import { QnA } from "./page/QnA";
+import { TourReview } from "./page/tourReview";
 const Router = () => {
   return (
     <>
@@ -12,9 +15,11 @@ const Router = () => {
         <Route path="/tour" element={<Tour />} />
         <Route path="/event" element={<Event />} />
         <Route path="/minigame" element={<MiniGame />} />
+        <Route path="/minigame" element={<MiniGame />} />
 
-
-        <Route path="/*" element={<Home />} />
+        <Route path="/foods" element={<Foods />} />
+        <Route path="/qna" element={<QnA />} />
+        <Route path="/tourreview" element={<TourReview />} />
       </Routes>
     </>
   );
