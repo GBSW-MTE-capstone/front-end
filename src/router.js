@@ -15,7 +15,6 @@ const Router = () => {
         <Route path="/tour" element={<Tour />} />
         <Route path="/event" element={<Event />} />
         <Route path="/minigame" element={<MiniGame />} />
-        <Route path="/minigame" element={<MiniGame />} />
 
         <Route path="/foods" element={<Foods />} />
         <Route path="/qna" element={<QnA />} />

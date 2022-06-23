@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaSearch } from "react-icons/fa"
+import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 export const Header = () => {
   const [searchText, setSearch] = useState("");
@@ -9,7 +9,7 @@ export const Header = () => {
   };
 
   const search = () => {
-    console.log(searchText)
+    console.log(searchText);
   };
 
   return (
@@ -41,13 +41,13 @@ export const Header = () => {
             <li>HOME</li>
           </Link>
           <Link to={"/tour"}>
-            <li>의성 관광 명소</li>
+            <li>관광 명소</li>
           </Link>
           <Link to={"/event"}>
             <li>축제</li>
           </Link>
           <Link to={"/foods"}>
-            <li>음식·툭산물</li>
+            <li>음식 · 툭산물</li>
           </Link>
           <Link to={"/tourreview"}>
             <li>여행 후기</li>

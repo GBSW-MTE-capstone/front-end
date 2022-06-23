@@ -1,16 +1,14 @@
 import React, { useState, forwardRef, useEffect } from "react";
 import MapModal from "./mapModal";
 
-const SvgComponent = ({ modalAttr, setModalAttr, setImgId }) => {
+const SvgComponent = ({ modalAttr, setModalAttr }) => {
   const [modal, setModal] = useState(false);
 
   const mouseOn = (e) => {
     // const x = e.pageX;
     // const y = e.pageY;
     // const name = e.target.getAttribute("name");
-    setModalAttr({
-      name: e.target.getAttribute("name"),
-    });
+    setModalAttr(e.target.getAttribute("name"));
     e.target.style.fill = "#ff8000";
     setModal(true);
   };
@@ -18,10 +16,6 @@ const SvgComponent = ({ modalAttr, setModalAttr, setImgId }) => {
     e.target.style.fill = e.target.style.color;
     setModal(false);
   };
-
-  useEffect(() => {
-    console.log(modalAttr);
-  }, [modalAttr]);
 
   return (
     <>
