@@ -14,28 +14,10 @@ export const Header = () => {
 
   return (
     <div className="headerContainer">
-      <div className="header">
-        <div>
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAHXPluq6GtTRPDIHRv5kJPy86uFjp5sO7hg&usqp=CAU"
-            alt="로고"
-          />
-          <Link to={"/"}>
-            <h2>의성군 문화관광 도우미</h2>
-          </Link>
-        </div>
-        <div className="searchForm">
-          <input
-            type={"text"}
-            placeholder="검색어를 입력하세요."
-            onChange={onChange}
-          />
-          <button onClick={search}>
-            <FaSearch />
-          </button>
-        </div>
-      </div>
       <div className="nav" id="nav">
+        <Link to={"/"}>
+          <h2>의성군 문화관광 도우미</h2>
+        </Link>
         <ul>
           <Link to={"/"}>
             <li>HOME</li>
@@ -56,6 +38,9 @@ export const Header = () => {
             <li>QnA</li>
           </Link>
         </ul>
+        <button onClick={search}>
+          <FaSearch />
+        </button>
       </div>
     </div>
   );

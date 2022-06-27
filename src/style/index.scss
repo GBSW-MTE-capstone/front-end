@@ -3,7 +3,7 @@ html, body {
   height: 100%;
   overflow-y: auto;
   &::-webkit-scrollbar {
-    width: 4px;
+    width: 0px;
   }
   &::-webkit-scrollbar-thumb {
     border-radius: 2px;
@@ -23,79 +23,27 @@ a:link, a:active, a:visited, a:hover {
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 4;
 }
 //home
-.header {
-  
-  background-color: #fff;
-  padding: 5px 10px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  & > div:first-child {
-    & > :is(a:active, a:visited, a:hover, a:link) {
-      color: black;
-    }
-  }
-  & > div {
-    display: flex;
-    align-items: center;
-  }
-  & > h2 {
-    font-size: 1.2em;
-  }
-  & > *, & > div > * {
-    display: inline-block;
-  }
-  & img {
-    width: 50px;
-    vertical-align: middle;
-  }
-  .searchForm {
-    border: 3px solid #FFA000;
-    border-radius: 50px;
-    overflow: hidden;
-    font-size: 1.3em;
-    position: relative;
-    * {
-      margin: 0;
-      border: none;
-    }
-    *:focus {
-      outline: none;
-    }
-    button {
-      background-color: #FFA000;
-      font-size: 1em;
-      padding: 8px 6px;
-      padding-left: 10px;
-    }
-    input {
-      width: 400px;
-      padding: 8px 9px;
-      font-size: 0.8em;
-    }
-  }
-  & > div:first-child {
-    padding: 18px 0;
-  }
-}
 .container {
+  // background-color: white;
+  scroll-behavior: smooth;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   & > div{
     scroll-snap-align: center;
   }
 }
 .nav {
-  background-color: #FFA000;
-  color: #fff;
+  background-color: #fff;
+  color: #212121;
   padding: 25px 5px;
-  text-align: center;
   top: 0;
+  display: flex;
+  justify-content: space-around;
   &  :is(ul, li) {
     display: inline-block;
   }
@@ -103,10 +51,24 @@ a:link, a:active, a:visited, a:hover {
     margin: 0 30px;
     font-weight: 600;
     font-size: 1.3rem;
+    color: #212121;
   }
   & li:hover {
     cursor: pointer;
     color: rgb(223, 223, 223);
+  }
+  button {
+    color: black;
+    border: none;
+    background-color: white;
+    font-size: 1.5em;
+    padding: 8px 6px;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+  h2 {
+    display: inline-block;
+    color: #212121;
   }
 }
 //footer
@@ -117,10 +79,6 @@ a:link, a:active, a:visited, a:hover {
 }
 
 //home
-.banner {
-  width: 100%;
-}
-
 .UseongMap {
   overflow: hidden;
   display: flex;
@@ -131,19 +89,21 @@ a:link, a:active, a:visited, a:hover {
   padding: 28px 0;
   height: fit-content;
   & > img {
-    z-index: -1;
+    z-index: 0;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    opacity: 0.8;
+    opacity: 0.9;
     background-size: cover;
   }
   svg {
+    z-index: 2;
     max-height: 500px;
     height: 80%;
   }
   .infoMap {
+    z-index: 2;
     margin: 0 40px;
     min-height: 500px;
     min-width: 300px;
@@ -157,42 +117,23 @@ a:link, a:active, a:visited, a:hover {
       text-align: left;
       list-style: none;
       margin: 5px 0;
+      overflow-y: auto;
+      height: 450px;
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background: #ccc;
+      }
     }
     h2 {
-      background-color: #FFA000;
+      background-color: #212121;
       color: white;
       padding: 5px 15px;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
     }
-  }
-}
-
-.bottomSection {
-  background-image: url('https://mblogthumb-phinf.pstatic.net/MjAyMDA2MjJfMjIy/MDAxNTkyODA0NzQ5ODE0.iwc1mZ_SVz3eP_IhEESkyXP6eB0JONGxU2UJbfZ_yNcg.gbZp8MjIRWSHmkxFbLBPYlhe2lcLOBoqUT3QrMh5kIsg.JPEG.postnaeil/%EB%8F%84%EC%8B%9C_%ED%99%A9%ED%98%BC.jpg?type=w800');
-  background-size: cover;
-  padding: 0 20%;
-  min-height: 400px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  & > * {
-    opacity: 0.85;
-    display: flex;
-    justify-content: space-around  ;
-    align-items: center;
-    & > *{
-      padding: 5px;
-      background-color: rgba(228, 228, 228, 0.753);
-      width: 400px;
-      height: 170px;
-      border-radius: 8px;
-    }
-  }
-  & > *:last-child > img {
-    border-radius: 8px;
-    width: 980px;
-    margin: 10px auto;
   }
 }
 .tourCon {
@@ -221,4 +162,59 @@ a:link, a:active, a:visited, a:hover {
   min-width: 800px;
   margin: 0 auto;
   padding: 5px 0;
+}
+.bannerCon {
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+  color: white;
+  height: 701px;
+  & > div {
+    position: relative;
+    top: 20%;
+    left: 10%;
+    text-shadow: -2px 2px 2px #909090;
+    h2 {
+      font-size: 3.3em;
+    }
+    p {
+      font-size: 1em;
+    }
+  }
+  & > img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+  margin: 10px 0;
+}
+.homeSection {
+  padding: 40px 0;
+  background-color: white;
+  text-align: center;
+  h1 {
+    padding: 44px 0;
+    font-size: 2.3em;
+    font-weight: 900;
+  }
+  & > div:nth-child(even) {
+    background-color: rgb(236, 236, 236);
+  }
+  .homeEvent {
+    display: flex;
+    justify-content: space-evenly;
+    & > div > img {
+      width: 300px;
+      height: 180px;
+      border-radius: 8px;
+    }
+    & > div > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: baseline;
+      text-align: left;
+    }
+    padding-bottom: 20px;
+  }
 }
