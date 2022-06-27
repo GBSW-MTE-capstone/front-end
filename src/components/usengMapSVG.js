@@ -4,7 +4,7 @@ import MapModal from "./mapModal";
 const SvgComponent = ({ modalAttr, setModalAttr }) => {
   const mouseOn = (e) => {
     setModalAttr(e.target.getAttribute("name"));
-    e.target.style.fill = "#ff8000";
+    e.target.style.fill = "#ddd";
   };
   const mouseLeave = (e) => {
     e.target.style.fill = e.target.style.color;

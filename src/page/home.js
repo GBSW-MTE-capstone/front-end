@@ -60,9 +60,36 @@ export const Home = () => {
       <div className="homeSection">
         <div>
           <h1>#1. 의성의 관광 명소 </h1>
-          <div>
-            NO.1 달빛공원
-            <div>NO.2 탑산약수온천, NO.산수유마을</div>
+          {/* NO.1 달빛공원
+            <div>NO.2 탑산약수온천, NO.산수유마을</div> */}
+          <div className="ranking">
+            <div>
+              <img
+                src="http://tong.visitkorea.or.kr/cms/resource/48/2738348_image2_1.jpg"
+                width="550px"
+              />
+              <div>
+                <h2>I. 달빛공원</h2>
+              </div>
+            </div>
+            <div>
+              <div>
+                <h2>II. 산수유마을</h2>
+              </div>
+              <img
+                src="http://tong.visitkorea.or.kr/cms/resource/48/2738348_image2_1.jpg"
+                width="550px"
+              />
+            </div>
+            <div>
+              <img
+                src="http://tong.visitkorea.or.kr/cms/resource/48/2738348_image2_1.jpg"
+                width="550px"
+              />
+              <div>
+                <h2>III. 금봉 자연 휴양림</h2>
+              </div>
+            </div>
           </div>
         </div>
         <div>
