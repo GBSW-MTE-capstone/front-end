@@ -29,7 +29,7 @@ export const Header = () => {
             <li>축제</li>
           </Link>
           <Link to={"/foods"}>
-            <li>음식 · 툭산물</li>
+            <li>음식 · 특산물</li>
           </Link>
           <Link to={"/tourreview"}>
             <li>여행 후기</li>
@@ -42,6 +42,7 @@ export const Header = () => {
           <FaSearch />
         </button>
       </div>
+      <hr/>
     </div>
   );
 };

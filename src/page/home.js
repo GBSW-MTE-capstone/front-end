@@ -5,6 +5,9 @@ import goGameBanner from "../assets/goGameBanner.png";
 import { useState, useTransition } from "react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import conrnusFruitPark from "../assets/ranking/cornusFruitPark.png"
+import foresttrip from "../assets/ranking/foresttrip.png"
+import moonpark from "../assets/ranking/moonpark.png"
 // import { UseongMapImg } from "../components/mapData";
 export const Home = () => {
   const [ispending, startTransition] = useTransition(10000);
@@ -49,11 +52,11 @@ export const Home = () => {
 
   return (
     <Layout>
-      <div style={{ height: "701px" }}></div>
+      <div style={{ height: "700px" }}></div>
       <div className="bannerCon">
         <div>
           <h2>Welcome to Uiseong</h2>
-          <p>의성에 어서 오세요.</p>
+          <p>활력이 넘치는 지역. 의성에 어서 오세요!</p>
         </div>
         <img src={banner} alt="달빛공원" />
       </div>
@@ -65,29 +68,38 @@ export const Home = () => {
           <div className="ranking">
             <div>
               <img
-                src="http://tong.visitkorea.or.kr/cms/resource/48/2738348_image2_1.jpg"
+                src={moonpark}
+                alt="달빛공원 랭킹"
                 width="550px"
               />
               <div>
                 <h2>I. 달빛공원</h2>
+                <p className="rank">01</p>
+                <p>은하수가 아름다운</p>
               </div>
             </div>
             <div>
               <div>
                 <h2>II. 산수유마을</h2>
+                <p className="rank">02</p>
+                <p>노란물결이 가득한</p>
               </div>
               <img
-                src="http://tong.visitkorea.or.kr/cms/resource/48/2738348_image2_1.jpg"
+                src={conrnusFruitPark}
                 width="550px"
+                alt="산수유마을 랭킹"
               />
             </div>
             <div>
               <img
-                src="http://tong.visitkorea.or.kr/cms/resource/48/2738348_image2_1.jpg"
+                src={foresttrip}
                 width="550px"
+                alt="금봉자연휴양림랭킹"
               />
               <div>
                 <h2>III. 금봉 자연 휴양림</h2>
+                <p className="rank">03</p>
+                <p>평화로운 자연과 함께</p>
               </div>
             </div>
           </div>
@@ -127,9 +139,10 @@ export const Home = () => {
             <img src={background} alt="지역사진" />
           </div>
         </div>
-        <div>
-          <h1>#4. 여행 후기</h1>
-        </div>
+        {/* <div>
+          <h1>#4. 의성 여행 후기</h1>
+        </div> */}
+        
       </div>
     </Layout>
   );

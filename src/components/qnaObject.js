@@ -2,18 +2,29 @@ import React from "react";
 
 const qnaObject = (props) => {
   const qna_object_style = {
-    block: {
-      height: "50px",
-      borderBottom: "1px solid #000",
-      backgroundColor: "#ccc",
+    tr: {
+      marginBottom:"5px",
+      borderBottom: "1px solid #ddd",
+      // transition: "all 0.2s",
+      // "&:hover": {
+      //   backgroundColor: "#fff"
+      // },
+      
     },
+    td: {
+      padding:"10px",
+    }
   };
+
   return (
-    <div style={qna_object_style.block}>
-      <span>{props.title}</span>
-      <span>{props.date}</span>
-      <span>{props.viewer}</span>
-    </div>
+    <tr style={qna_object_style.tr} onClick={()=>{
+      console.log(props.id)
+    }} >
+      <td style={qna_object_style.td}>{props.id}</td>
+      <td style={qna_object_style.td}>{props.title}</td>
+      <td style={qna_object_style.td}>{props.date}</td>
+      <td style={qna_object_style.td}>{props.viewer}</td>
+  </tr>
   );
 };
 export default qnaObject;

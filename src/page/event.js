@@ -48,17 +48,19 @@ export const Event = () => {
       },
     ],
   };
+
   return (
     <Layout>
+      <img src="https://cdn.discordapp.com/attachments/915127755480375306/991529184360931418/d10896d1ad7542c5.png" />
       <div className="festival">
         <div>
-          <h2>현재 진행중인 축제</h2>
+          <h2># 현재 진행중인 축제</h2>
           {data.data.map((item) => {
             return (
               <div className="eventList" key={item.id}>
-                <img src={item.thumnail} width="300px" />
+                <img src={item.thumnail} width="300px" alt="축제사진" />
                 <div>
-                  <h2>{item.name}</h2>
+                  <h2># {item.name}</h2>
                   <p>일시 : {item.date}</p>
                   <p>설명 : {item.desc}</p>
                 </div>
@@ -68,14 +70,15 @@ export const Event = () => {
         </div>
         <hr />
         <div>
-          <h2>의성의 모든 축제</h2>
+          <h2># 의성의 축제</h2>
+          <div className="festivalList">
           {sampleData.success ? (
             sampleData.data.map((item) => {
               return (
-                <div key={item.id} className="eventList">
-                  <img src={item.thumnail} width="300px" />
+                <div key={item.id} className="eventListCard">
+                  <img src={item.thumnail}  alt={item.name} />
                   <div>
-                    <h2>제목 : {item.name}</h2>
+                    <h2># {item.name}</h2>
                     <p>일시 : {item.date}</p>
                     <p>설명 : {item.desc}</p>
                   </div>
@@ -83,8 +86,9 @@ export const Event = () => {
               );
             })
           ) : (
-            <></>
+            <>데이터를 불러오지 못했습니다.</>
           )}
+          </div>
         </div>
       </div>
     </Layout>
