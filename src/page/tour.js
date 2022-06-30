@@ -21,6 +21,7 @@ import { Uiseong } from "../components/tourDetails/uiseong";
 export const Tour = () => {
   return (
     <Layout>
+      <img src="https://cdn.discordapp.com/attachments/915127755480375306/991645076767899698/ef34836f4d896674.png" />
       <div className="tourCon">
         <Uiseong />
         <Dain/>

@@ -1,23 +1,18 @@
 import { Layout } from "../components/layout";
 import banner from "../assets/banner.png";
 import UseongMapSVG from "../components/usengMapSVG";
-import goGameBanner from "../assets/goGameBanner.png";
-import { useState, useTransition } from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import { useEffect } from "react";
 import conrnusFruitPark from "../assets/ranking/cornusFruitPark.png"
 import foresttrip from "../assets/ranking/foresttrip.png"
 import moonpark from "../assets/ranking/moonpark.png"
 // import { UseongMapImg } from "../components/mapData";
 export const Home = () => {
-  const [ispending, startTransition] = useTransition(10000);
   const [background, setBackground] = useState("./background/의성읍.png");
   const [modalAttr, setModalAttr] = useState("의성읍");
 
   useEffect(() => {
-    startTransition(() => {
       setBackground(`./background/${modalAttr}.png`);
-    });
   }, [modalAttr]);
 
   const sampleData = {
@@ -111,7 +106,7 @@ export const Home = () => {
               sampleData.data.map((item) => {
                 return (
                   <div key={item.id} className="eventList">
-                    <img src={item.thumnail} width="300px" />
+                    <img src={item.thumnail} className="eventImg" alt={item.name} />
                     <div>
                       <h2>제목 : {item.name}</h2>
                       <p>일시 : {item.date}</p>

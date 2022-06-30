@@ -8,7 +8,7 @@ export const Foods = () => {
       marginRight: "auto",
       marginTop: "80px",
       maxWidth: "1300px",
-      minWidth: "1000px",
+      minWidth: "400px",
     },
     row:{
       backgroundColor:"#000",

@@ -42,7 +42,7 @@ export const Header = () => {
           <FaSearch />
         </button>
       </div>
-      <hr/>
+      {/* <hr/> */}
     </div>
   );
 };
