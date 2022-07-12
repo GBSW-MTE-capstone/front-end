@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.84210a1c.css",
+    "main.js": "/static/js/main.bfe698ce.js",
+    "static/media/banner.png": "/static/media/banner.d327734b06332460673f.png",
+    "static/media/foresttrip.png": "/static/media/foresttrip.1ac38d480f56c247b0e5.png",
+    "static/media/moonpark.png": "/static/media/moonpark.9a9305dfb7a1d0c3cae7.png",
+    "static/media/cornusFruitPark.png": "/static/media/cornusFruitPark.07cda291296a66421c16.png",
+    "index.html": "/index.html",
+    "main.84210a1c.css.map": "/static/css/main.84210a1c.css.map",
+    "main.bfe698ce.js.map": "/static/js/main.bfe698ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84210a1c.css",
+    "static/js/main.bfe698ce.js"
+  ]
+}
