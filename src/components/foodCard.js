@@ -2,51 +2,52 @@ import React from "react";
 const FoodCard = (props) =>{
     const foods_card = {
         card:{
-            border: "1px solid #ccc",
+            boxShadow: "12px 12px 16px -2px rgba(0,0,0,0.3)",
             position: "relative",
-            padding: "10px",
             textAlign:"center",
-            height:"350px"
+            height:"350px",
+            margin: '10px',
+            borderRadius: '10px'
           },
           num:{
             position:"relative",
             display: "block",
-            margin:"10px auto",
-            width: "34px",
-            height: "34px",
-            lineHeight: "34px",
-            color:"#fff",
-            backgroundColor:"#3079C2",
+            margin:"-25px auto",
+            width: "40px",
+            height: "40px",
+            lineHeight: "40px",
+            color:"#F9EBDE",
+            backgroundColor:"#815854",
             textAlign:"center",
             borderRadius:"50%",
-            fontSize: "11px"
-          },
-          line:{
-            zIndex:"-1",
-            content: "",
-            position: "relative",
-            width: "100%",
-            left: "0",
-            top: "-27px",
-            borderBottom: "1px dashed #ccc",
+            fontSize: "16px"
           },
           title:{
+            margin: '30px 0px 10px 0px',
             fontSize:"20px",
+          },
+          img: {
+            objectFit: 'cover',
+            height: '150px',
+            borderRadius: '10px 10px 0px 0px'
+          },
+          content: {
+            margin: '0px 10px 0px 10px'
           }
     }
     return(
         <div style={foods_card.card}>
             <p>
                 <img
+                style={foods_card.img}
                 width="100%"
                 src={props.link}
                 alt={props.ex}
                 />
             </p>
             <span style={foods_card.num}>{props.num}</span>
-            <p style={foods_card.line}/>
             <p style={foods_card.title}>{props.title}</p>
-            <p>{props.content}</p>
+            <p style={foods_card.content}>{props.content}</p>
         </div>
     )
 }
