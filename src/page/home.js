@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import conrnusFruitPark from "../assets/ranking/cornusFruitPark.png"
 import foresttrip from "../assets/ranking/foresttrip.png"
 import moonpark from "../assets/ranking/moonpark.png"
+import { AnimatePresence, motion } from "framer-motion";
 // import { UseongMapImg } from "../components/mapData";
 export const Home = () => {
   const [background, setBackground] = useState("./background/의성읍.png");
@@ -152,7 +153,9 @@ export const Home = () => {
                 }
               </ul>
             </div>
-            <img src={background} alt="지역사진" />
+            <AnimatePresence>
+            <motion.img src={background} key={background} initial={{ opacity: 0.6 }} animate={{ opacity: 1 }} exit={{ opacity: 0.6 }} alt="지역사진" />
+            </AnimatePresence>
           </div>
         </div>
         {/* <div>
