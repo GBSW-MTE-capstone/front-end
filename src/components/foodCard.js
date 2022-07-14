@@ -6,6 +6,7 @@ const FoodCard = (props) =>{
             position: "relative",
             padding: "10px",
             textAlign:"center",
+            height:"350px"
           },
           num:{
             position:"relative",
