@@ -107,6 +107,7 @@ export const QnA = () => {
             <tbody>
               {data.success ? data.data.map(item => {
                 return (
+                  //온클릭 하면 id 값으로 동적 라우팅 해서 view로
                   <QnaObject key={item.id} id={item.id} title={item.title} date={item.date} viewer={item.viewer} />
                 )
               }) : <>asd</>}

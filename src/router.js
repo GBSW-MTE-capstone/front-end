@@ -9,6 +9,7 @@ import { QnA } from "./page/QnA";
 import { TourReview } from "./page/tourReview";
 import { TourReviewEdit } from "./page/tourReviewEdit";
 import { QnAEdit } from "./page/QnAEdit";
+import { QnAview } from "./page/QnAview";
 const Router = () => {
   return (
     <>
@@ -20,6 +21,7 @@ const Router = () => {
 
         <Route path="/foods" element={<Foods />} />
         <Route path="/qna" element={<QnA />} />
+        <Route path="/qnaview" element={<QnAview />} />
         <Route path="/qnaedit" element={<QnAEdit/>} />
         <Route path="/tourreview" element={<TourReview />} />
         <Route path="/tourreviewedit" element={<TourReviewEdit/>} />
