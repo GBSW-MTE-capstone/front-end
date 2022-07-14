@@ -21,6 +21,7 @@ export const Foods = () => {
   }
   return (
     <Layout>
+      <img src="https://cdn.discordapp.com/attachments/915127755480375306/996950024254672996/d30da80cd6b5b085.png" alt="banner" />
       <div style={foods_style.frame}>
         <h1># 의성군의 특산품들</h1>
         <div style={foods_style.row}>

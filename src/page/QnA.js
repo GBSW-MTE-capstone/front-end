@@ -4,7 +4,7 @@ import QnaObject from "../components/qnaObject";
 export const QnA = () => {
   const qna_style = {
     frame: {
-      minHeight: "700px",
+      minHeight: "600px",
     },
     list: {
       borderCollapse:"collapse",
@@ -17,7 +17,6 @@ export const QnA = () => {
       textAlign:"center"
     },
     list_head:{
-      height:"40px",
       borderBottom:"1px solid",
     },
     qna_id:{
@@ -33,8 +32,63 @@ export const QnA = () => {
       width:"10% "
     }
   };
+
+  const data = {
+    success : true,
+    data : [
+      {
+        id : 1,
+        title : "asdf",
+        date : "2022-1-1",
+        viewer : 1
+      },
+      {
+        id : 2,
+        title : "asdf",
+        date : "2022-1-1",
+        viewer : 1
+      },
+      {
+        id : 3,
+        title : "asdf",
+        date : "2022-1-1",
+        viewer : 1
+      },
+      {
+        id : 4,
+        title : "asdf",
+        date : "2022-1-1",
+        viewer : 1
+      },
+      {
+        id : 5,
+        title : "asdf",
+        date : "2022-1-1",
+        viewer : 1
+      },
+      {
+        id : 6,
+        title : "asdf",
+        date : "2022-1-1",
+        viewer : 1
+      },
+      {
+        id : 7,
+        title : "asdf",
+        date : "2022-1-1",
+        viewer : 1
+      },
+      {
+        id : 8,
+        title : "asdf",
+        date : "2022-1-1",
+        viewer : 1
+      },
+    ]
+  }
   return (
     <Layout>
+      <img src="https://cdn.discordapp.com/attachments/915127755480375306/996950031951208448/QA.png" alt="banner" />
       <div style={qna_style.frame}>
           <table style={qna_style.list}>
             <thead style={qna_style.list_head}>
@@ -46,16 +100,11 @@ export const QnA = () => {
               </tr>
             </thead>
             <tbody>
-              <QnaObject id="1" title="asdf" date="2022-1-1" viewer="1" />
-              <QnaObject id="2" title="asdf" date="2022-1-1" viewer="1" />
-              <QnaObject id="3" title="asdf" date="2022-1-1" viewer="1" />
-              <QnaObject id="4" title="asdf" date="2022-1-1" viewer="1" />
-              <QnaObject id="5" title="asdf" date="2022-1-1" viewer="1" />
-              <QnaObject id="6" title="asdf" date="2022-1-1" viewer="1" />
-              <QnaObject id="7" title="asdf" date="2022-1-1" viewer="1" />
-              <QnaObject id="8" title="asdf" date="2022-1-1" viewer="1" />
-              <QnaObject id="9" title="asdf" date="2022-1-1" viewer="1" />
-              <QnaObject id="10" title="asdf" date="2022-1-1" viewer="1" />
+              {data.success ? data.data.map(item => {
+                return (
+                  <QnaObject key={item.id} id={item.id} title={item.title} date={item.date} viewer={item.viewer} />
+                )
+              }) : <>asd</>}
             </tbody>
           </table>
       </div>
