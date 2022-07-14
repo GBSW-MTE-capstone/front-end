@@ -345,3 +345,67 @@ a:link, a:active, a:visited, a:hover {
     height: auto;
   }
 }
+.qnaEditContainer {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: large;
+    font-weight: 500;
+    margin: 10px 0;
+  }
+  input:focus {
+    outline: rgb(70, 70, 70);
+  }
+  button {
+    padding: 5px 25px;
+    margin: 10px 0;
+    background-color: white;
+    border: 1px solid #0084ff;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    background-color: #0084ff;
+  }
+  button:hover {
+    background-color: #59acfa;
+  }
+  button:active {
+    text-decoration: underline;
+  }
+  .qnaEditor {
+    text-align: left;
+    div:last-child {
+      div {
+        min-height: 550px;
+      }
+    }
+  }
+}
+.goqnaedit {
+  float: right;
+  position: relative;
+  top: 40px;
+  right: 45px;
+  button {
+    padding: 5px 15px;
+    background-color: white;
+    border: 1px solid #0084ff;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    background-color: #0084ff;
+  }
+  button:hover {
+    background-color: #59acfa;
+  }
+  button:active {
+    text-decoration: underline;
+  }
+}

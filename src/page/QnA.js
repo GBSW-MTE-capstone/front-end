@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Layout } from "../components/layout";
 import QnaObject from "../components/qnaObject";
 export const QnA = () => {
   const qna_style = {
     frame: {
       minHeight: "600px",
+      width: "fit-content",
+      display:"block",
+      margin: "0 auto"
     },
     list: {
       borderCollapse:"collapse",
@@ -84,12 +88,13 @@ export const QnA = () => {
         date : "2022-1-1",
         viewer : 1
       },
-    ]
+    ]     
   }
   return (
     <Layout>
       <img src="https://cdn.discordapp.com/attachments/915127755480375306/996950031951208448/QA.png" alt="banner" />
       <div style={qna_style.frame}>
+        <Link to="/qnaedit" className="goqnaedit"><button>QnA 글쓰기</button></Link>
           <table style={qna_style.list}>
             <thead style={qna_style.list_head}>
               <tr>
